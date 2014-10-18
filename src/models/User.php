@@ -7,7 +7,8 @@ use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
 use App\Models\BaseModelAbstract;
 
-class User extends BaseModelAbstract implements UserInterface, RemindableInterface {
+class User extends BaseModelAbstract implements UserInterface, RemindableInterface
+{
 
     use UserTrait, RemindableTrait;
         
@@ -117,5 +118,4 @@ class User extends BaseModelAbstract implements UserInterface, RemindableInterfa
     {
         return $this->first_name. " ". $this->last_name;
     }
-    
 }

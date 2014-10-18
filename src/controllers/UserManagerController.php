@@ -91,13 +91,10 @@ class UserManagerController extends \App\Controllers\BaseHttpController
                 ->withInput();
         }
             
-        if (
-            Auth::attempt(
-                array(
-                    'email'=>Input::get('email'),
-                    'password'=>Input::get('password')
-                )
-            )
+        if (Auth::attempt(array(
+            'email'=>Input::get('email'),
+            'password'=>Input::get('password')
+            ))
         ) {
             Event::fire(Events::USER_LOGIN, array(Auth::user()));
         } else {

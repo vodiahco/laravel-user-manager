@@ -3,23 +3,24 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class DdataUsers extends Migration {
+class DdataUsers extends Migration
+{
 
-	/**
-	 * Run the migrations.
-	 *
-	 * @return void
-	 */
-	public function up()
-	{
-	Schema::create('dd-user', function($table)
-            {
+    /**
+    * Run the migrations.
+    *
+    * @return void
+    */
+    public function up()
+    {
+        Schema::create(
+            'dd-user',
+            function ($table) {
                 $table->engine = 'InnoDB';
                 $table->bigIncrements('id');
-                //$table->primary('id');
 
                 $table->string('email', 150)->unique();
-                $table->string('password',64);
+                $table->string('password', 64);
                 $table->string('salt', 10);
                 $table->string('first_name', 40)->nullable();
                 $table->string('last_name', 40)->nullable();
@@ -44,18 +45,13 @@ class DdataUsers extends Migration {
                 $table->tinyInteger('uid')->default(0);
                 $table->rememberToken();
                 $table->date('dob')->nullable();
-            });	
-	}
-
-	/**
-	 * Reverse the migrations.
-	 *
-	 * @return void
-	 */
-	public function down()
-	{
-            Schema::dropIfExists('dd-user');
-	}
-
-
+            }
+        );
+    }
+   
+    
+    public function down()
+    {
+        Schema::dropIfExists('dd-user');
+    }
 }
