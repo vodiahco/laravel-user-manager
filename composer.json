@@ -1,6 +1,6 @@
 {
     "name": "ddata/user-manager",
-    "description": "",
+    "description": "Laravel package for managing users",
     "authors": [
         {
             "name": "Victor",
@@ -11,6 +11,28 @@
         "php": ">=5.4.0",
         "illuminate/support": "4.2.*"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/vodiahco/laravel-user-manager.git"
+        }
+    ],
+    "type": "library",
+    "keywords": [
+        "laravel",
+        "user",
+        "login",
+        "signup",
+        "registration"
+    ],
+    "homepage": "https://github.com/vodiahco/laravel-user-manager",
+    "authors": [
+        {
+            "name": "Victor Odiah",
+            "email": "vodiahco1@gmail.com",
+            "homepage": "http://codewater.wordpress.com"
+        }
+    ],
     "autoload": {
         "classmap": [
             "src/migrations",
