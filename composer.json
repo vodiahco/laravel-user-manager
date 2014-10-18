@@ -1,6 +1,7 @@
 {
     "name": "ddata/user-manager",
     "description": "Laravel package for managing users",
+    "license": "MIT License (MIT)",
     "authors": [
         {
             "name": "Victor",
