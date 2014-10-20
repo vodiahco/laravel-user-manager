@@ -1,6 +1,6 @@
 <?php
 
-namespace Ddata\UserManager\controllers;
+namespace Ddata\UserManager\Controllers;
 
 use Ddata\UserManager\Models\User;
 use Illuminate\Support\Facades\View;

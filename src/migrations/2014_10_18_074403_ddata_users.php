@@ -14,7 +14,7 @@ class DdataUsers extends Migration
     public function up()
     {
         Schema::create(
-            'dd-user',
+            'dd_user',
             function ($table) {
                 $table->engine = 'InnoDB';
                 $table->bigIncrements('id');
@@ -52,6 +52,6 @@ class DdataUsers extends Migration
     
     public function down()
     {
-        Schema::dropIfExists('dd-user');
+        Schema::dropIfExists('dd_user');
     }
 }
